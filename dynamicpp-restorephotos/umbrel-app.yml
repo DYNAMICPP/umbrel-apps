@@ -11,9 +11,9 @@ dependencies: []
 repo: https://github.com/Nutlope/
 support: https://github.com/Nutlope/restorePhotos/issues
 port: 7564
-icon: https://raw.githubusercontent.com/DYNAMICPP/umbrel-apps/master/restorephotos/assets/icon.png
+icon: https://raw.githubusercontent.com/DYNAMICPP/umbrel-apps/master/dynamicpp-restorephotos/assets/icon.png
 gallery:
-  - https://raw.githubusercontent.com/DYNAMICPP/shonp40-portainer/master/restorephotos/assets/1.png
+  - https://raw.githubusercontent.com/DYNAMICPP/shonp40-portainer/master/dynamicpp-restorephotos/assets/1.png
 path: ''
 defaultUsername: ''
 defaultPassword: ''
