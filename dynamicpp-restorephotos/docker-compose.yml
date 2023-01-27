@@ -6,10 +6,23 @@ services:
       APP_HOST: restorephotos_server_1
       APP_PORT: 7564
   server:
-    build: .
+    image: alpine:latest
     working_dir: /app
     command: ["npm", "run", "dev"]
     ports:
       - "7564:3000"
     environment:
       - REPLICATE_API_KEY=250218d9f4712cb9ea7e914d11afb4f6675bccbd
+    run:
+        # Install git and curl
+        apk add --no-cache git bash curl
+        # Clone the repository
+        git clone https://github.com/Nutlope/restorePhotos.git .
+        # Install the necessary packages
+        echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
+        apk update
+        apk add nodejs npm
+        # Install Dependencies
+        npm install
+        # Create the .env file and set the environment variable
+        echo "REPLICATE_API_KEY=250218d9f4712cb9ea7e914d11afb4f6675bccbd" > .env
