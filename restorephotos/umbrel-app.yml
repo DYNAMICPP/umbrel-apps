@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: restorephotos
 category: Files
-name: restorePhotots
+name: restorePhotos
 version: 1.0
 tagline: Unblur
 description: Restoring old and blurry face photos with AI.
