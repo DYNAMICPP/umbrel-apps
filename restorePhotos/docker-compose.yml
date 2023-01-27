@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      # The format here is: <app-id>_<docker-service-name>_1
+      APP_HOST: restorephotos_server_1
+      APP_PORT: 7564
+  server:
+    build: .
+    working_dir: /app
+    command: ["npm", "run", "dev"]
+    ports:
+      - "7564:3000"
+    environment:
+      - REPLICATE_API_KEY=250218d9f4712cb9ea7e914d11afb4f6675bccbd
